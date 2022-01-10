@@ -1,17 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function TicTacToe() {
+  return (
+    <div className='grid'>
+      <Square position={0} />
+      <Square position={1} />
+      <Square position={2} />
+      <Square position={3} />
+      <Square position={4} />
+      <Square position={5} />
+      <Square position={6} />
+      <Square position={7} />
+      <Square position={8} />
+    </div>
+  );
+}
+function Square({ position }) {
+  return <div className='square'>{position}</div>;
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Circle() {
+  return;
+  <div>Circle</div>;
+}
+
+function Cross() {
+  return <div>Cross> </div>;
+}
+
+function Result() {
+  return <div>Result</div>;
+}
+
+ReactDOM.render(<TicTacToe />, document.getElementById('app'));
